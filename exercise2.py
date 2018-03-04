@@ -5,7 +5,7 @@ For this exercise, draw a random number of randomly-sized sprites with a random 
 
 '''
 import sys, logging, pygame, random
-assert sys.version_info >= (3,4), 'This script requires at least Python 3.4' 
+assert sys.version_info >= (3,4), 'This script requires at least Python 3.4'
 
 logging.basicConfig(level=logging.CRITICAL)
 logger = logging.getLogger(__name__)
@@ -56,6 +56,12 @@ def main():
 			if event.type == pygame.QUIT:
 				pygame.quit()
 				sys.exit(0)
+			if event.type == pygame.MOUSEBUTTONUP: #ONLY CREATES OBJECTS ON MOUSE CLICK
+				block = Block((random.randrange(255), random.randrange(255), random.randrange(255)),
+				(random.randrange(200), random.randrange(150)), (random.randrange(800), random.randrange(600)),
+				(random.randrange(-10, 10), random.randrange(-10,10)))
+				blocks.add(block)
+
 
 		blocks.update()
 		blocks.draw(screen)
