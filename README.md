@@ -1,3 +1,5 @@
+# I COULD NOT FIGURE OUT EXERCISE 4 SO IT REMAINS THE SAME.
+Other than exercise4, all files should fulfill their requirements.
 # 05a-Exercises-pygame-sprites
 
 Here are some exercises to help you learn about how sprites are implemented in Pygame.
